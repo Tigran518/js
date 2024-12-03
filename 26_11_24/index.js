@@ -46,39 +46,67 @@ i >= 50 → “Pass”
 default → “Fail”
 */
 
-const students = [
-    { name: "Anna", grade: 85 },
-    { name: "Mariam", grade: 92 },
-    { name: "Olivia", grade: 76 },
-    { name: "Emma", grade: 59 },
+// const students = [
+//     { name: "Anna", grade: 85 },
+//     { name: "Mariam", grade: 92 },
+//     { name: "Olivia", grade: 76 },
+//     { name: "Emma", grade: 59 },
+// ];
+
+// for (let i = 0; i < students.length; i++) {
+//     // if (students[i].grade >= 90) {
+//     //     console.log("Excellent");
+//     // } else if (students[i].grade >= 75) {
+//     //     console.log("Good");
+//     // } else if (students[i].grade >= 50) {
+//     //     console.log("Pass");
+//     // } else {
+//     //     console.log("Fail");
+//     // }
+
+//     switch (true) {
+//         case students[i].grade >= 90:
+//             console.log(students[i].name, ": Excellent");
+//             break;
+        
+//         case students[i].grade >= 75:
+//             console.log(students[i].name, ": Good");
+//             break;
+        
+//         case students[i].grade >= 50:
+//             console.log(students[i].name, ": Pass");
+//             break;
+    
+//         default:    
+//             console.log(students[i].name, ": Fail");
+//             break;
+//     }
+// }
+
+// Problem 2: Car Speeds
+// Description:
+// You are given an array of cars, where each car has a model and speed (in km/h). 
+//Your task is to identify which cars are exceeding 120 km/h and which are safe (≤120 km/h). 
+//Store the safe cars and speeding cars in separate arrays. Use a for loop and a if else statement.
+
+const cars = [
+    { model: "Toyota", speed: 100 },
+    { model: "BMW", speed: 150 },
+    { model: "Lada", speed: 80 },
+    { model: "Audi", speed: 130 },
+    { model: "Mercedes-Benz", speed: 260 }
 ];
 
-for (let i = 0; i < students.length; i++) {
-    // if (students[i].grade >= 90) {
-    //     console.log("Excellent");
-    // } else if (students[i].grade >= 75) {
-    //     console.log("Good");
-    // } else if (students[i].grade >= 50) {
-    //     console.log("Pass");
-    // } else {
-    //     console.log("Fail");
-    // }
+const safeCars = [];
+const speedingCars = [];
 
-    switch (true) {
-        case students[i].grade >= 90:
-            console.log(students[i].name, ": Excellent");
-            break;
-        
-        case students[i].grade >= 75:
-            console.log(students[i].name, ": Good");
-            break;
-        
-        case students[i].grade >= 50:
-            console.log(students[i].name, ": Pass");
-            break;
-    
-        default:    
-            console.log(students[i].name, ": Fail");
-            break;
+for (let i = 0; i < cars.length; i++) {
+    if (cars[i].speed > 120) {
+        speedingCars.push(cars[i].model);
+    } else {
+        safeCars.push(cars[i].model);
     }
 }
+
+console.log("Safe cars are -",safeCars);
+console.log("Speed cars are -",speedingCars);
