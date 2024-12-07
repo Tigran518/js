@@ -89,24 +89,39 @@ default → “Fail”
 //Your task is to identify which cars are exceeding 120 km/h and which are safe (≤120 km/h). 
 //Store the safe cars and speeding cars in separate arrays. Use a for loop and a if else statement.
 
-const cars = [
-    { model: "Toyota", speed: 100 },
-    { model: "BMW", speed: 150 },
-    { model: "Lada", speed: 80 },
-    { model: "Audi", speed: 130 },
-    { model: "Mercedes-Benz", speed: 260 }
-];
+// const cars = [
+//     { model: "Toyota", speed: 100 },
+//     { model: "BMW", speed: 150 },
+//     { model: "Lada", speed: 80 },
+//     { model: "Audi", speed: 130 },
+//     { model: "Mercedes-Benz", speed: 260 }
+// ];
 
-const safeCars = [];
-const speedingCars = [];
+// const safeCars = [];
+// const speedingCars = [];
 
-for (let i = 0; i < cars.length; i++) {
-    if (cars[i].speed > 120) {
-        speedingCars.push(cars[i].model);
-    } else {
-        safeCars.push(cars[i].model);
-    }
-}
+// for (let i = 0; i < cars.length; i++) {
+//     if (cars[i].speed > 120) {
+//         speedingCars.push(cars[i].model);
+//     } else {
+//         safeCars.push(cars[i].model);
+//     }
+// }
 
-console.log("Safe cars are -",safeCars);
-console.log("Speed cars are -",speedingCars);
+// console.log("Safe cars are -",safeCars);
+// console.log("Speed cars are -",speedingCars);
+
+// Problem 3: Longest Text
+// Given an array of strings ["React", "JavaScript", "Redux", "PHP", "C#"]:
+// Write a program to find the longest word in the array.
+// Solution in JavaScript using only for loop and arrays:
+
+// let arr = ["React", "JavaScript", "Redux", "PHP", "C#"];
+// let longestWordInArr = arr[0];
+
+// for (let i = 1; i < arr.length; i++) {
+//     if (longestWordInArr.length < arr[i].length) {
+//         longestWordInArr = arr[i];
+//     }
+// }
+// console.log(longestWordInArr);
